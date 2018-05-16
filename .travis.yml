@@ -1,0 +1,30 @@
+dist: trusty
+sudo: false
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+language: python
+matrix:
+  include:
+  - python: '3.6'
+    env: TOXENV=py36
+install:
+- pip install tox
+script:
+- tox
+before_install:
+- pip install codecov
+after_success:
+- tox -e coverage-report
+- codecov
+notifications:
+  email: false
+deploy:
+  provider: pypi
+  user: spotify_alf
+  password:
+    secure: QgCrAQ/wasi8LPu632MeGJ2kZjA56r0QM2pi5nr4y+0cs6O+OoX9PZ1W6EBMu/pPwBD81+AotO8mafGrYZazLRq1aTkcklqRrb5sUSJ606Y53ceQx/AuN5hOUbJN/NrXoJlkc5LQJukU+auspI29r58Blb/HWuhGbie0qH2hGwJQymwvb7Itio/Qs+SZG2VMpJPVOJUO7ssppy3vW3y6xYoRRxjta/7ras316DzuNCkU4YmGfICjLOCwgQtRNUcrH23oylWI/I1dWLgFHjK2NMxBzYn+ughqHrMcBwITG4F69twqlSN4wDEHsDm+JED68O5wFPzP0KWs0tg520tJtBUTyXAw9x8akNeMtowhvqUxnTP1YPjttu4lA1n7Nl9wUn5kTE8SMeDTYLF4oSisZ/FPjQct2oRw3xrHRPZD6Ojxoj5vmvbrmBQiZtYK/n9vmW3beOpfsyj8y6mSAAlyq7adrSQuwg+qC/bIeV1Mc6LMUtj3rfDMZc2R9L4b17iN+Gd0TBc3quzuvv2wbGKoB30iWstQ1zUX3aeEh5vDuN50c8gDrXvHp0H2u5/9FNWERonDMbiOCKcyePnRXGfTT/Gux13584J/1FWjUho8S/p8cIAefddd01yIfuhRfLnQFnOoct3kAfXtoQqgPE1sppRQ8mSLyAZZXpzCtqrEOAw=
+  on:
+    tags: true
+    branch: master
+  distributions: sdist bdist_wheel

@@ -1,0 +1,13 @@
+[run]
+branch = True
+source =
+    aioshumway
+
+[paths]
+source =
+   aioshumway
+   .tox/*/lib/python*/site-packages/aioshumway
+   .tox/pypy/site-packages/aioshumway
+
+[report]
+show_missing = True
