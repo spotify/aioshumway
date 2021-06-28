@@ -23,7 +23,7 @@ __author__ = 'Matt Obarzanek'
 __version__ = '1.0.0'
 __license__ = 'Apache 2.0'
 __email__ = 'matto@spotify.com'
-__description__ = 'Asynchronous metrics library for ffwd'
+__description__ = 'Asynchronous metrics library for ffwd; DEPRECATED'
 __uri__ = 'https://github.com/spotify/aioshumway'
 
 import asyncio

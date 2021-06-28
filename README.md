@@ -1,6 +1,8 @@
-# AIOShumway
+# *** DEPRECATED AS OF 6/28/21 ***
 
-[![Build Status](https://travis-ci.org/spotify/aioshumway.svg?branch=master)](https://travis-ci.org/spotify/aioshumway) 
+(and never used, as far as we can tell)
+
+# AIOShumway
 
 A wrapper around the [shumway](https://github.com/spotify/shumway) library that uses [asyncio](https://docs.python.org/3/library/asyncio.html) to make all IO operations non-blocking and compatible with the async/await syntax.
 
