@@ -20,7 +20,7 @@ with the async/await syntax.
 """
 
 __author__ = 'Matt Obarzanek'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __license__ = 'Apache 2.0'
 __email__ = 'matto@spotify.com'
 __description__ = 'Asynchronous metrics library for ffwd; DEPRECATED'
