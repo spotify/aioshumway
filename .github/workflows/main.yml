@@ -37,7 +37,6 @@ jobs:
         # Only need to do this once
         if: ${{ matrix.python-version == 3.6 }}
         run: |
-          tox -e coverage-report
           codecov
 
   build_and_publish:
